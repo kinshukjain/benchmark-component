@@ -1,0 +1,21 @@
+.fixedTableWrapper {
+  display: flex;
+}
+
+.fixedColumn {
+  width: 10%;
+  height: 100%;
+  z-index: 2;
+  overflow: auto;
+}
+
+.fixedTable {
+  width: 90%;
+  overflow-x: auto;
+}
+
+.tableWrapper {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
