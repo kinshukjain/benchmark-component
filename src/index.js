@@ -5,10 +5,10 @@ import {MeasurePerformance} from './performanceMeasureUtils';
 const componentList = [ReactTable];
 const perf = new MeasurePerformance();
 // first-render
-perf.firstRender(componentList);
+// perf.firstRender(componentList);
 
 // rerenders
 // perf.multipleRenders(componentList);
 
 // table update - one table at a time
-// perf.updateCompleteTable(componentList);
+perf.updateCompleteTable(componentList);

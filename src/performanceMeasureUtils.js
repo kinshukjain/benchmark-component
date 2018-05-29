@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {makeData} from './Utils';
 
-const DATA_SIZE = 10;
+export const DATA_SIZE = 100;
 
 class Wrapper extends Component {
   constructor(props) {
@@ -15,10 +15,12 @@ class Wrapper extends Component {
   componentDidMount() {
     if(this.props.updateTest) {
       setTimeout(() => {
+        const data = this.getData(); // this.state.info
+        // data[0].age = 123456;
         this.prevTime = performance.now();
         console.log(`%cTesting componenent - ${this.props.component.name}`,'color: green; font-weight: bold;');
-        this.setState({ info: this.getData() });
-      }, 200);
+        this.setState({ info: data });
+      }, 2000);
     }
   }
 

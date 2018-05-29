@@ -6,8 +6,10 @@ import _ from 'lodash';
 import "react-table/react-table.css";
 import "./draggableTable.css";
 
+import {DATA_SIZE} from './performanceMeasureUtils';
+
 /** constants for virtual scroll */
-const TABLE_PAGE_SIZE = 1000;
+const TABLE_PAGE_SIZE = DATA_SIZE;
 const DEFAULT_ROW_HEIGHT = 30;
 const MIN_ROWS = 3;
 const DEFAULT_PAGE_SIZE = 10;
@@ -23,6 +25,7 @@ Object.assign(ReactTableDefaults, {
  * Table Component: HOC over React-Table
  * TODO - Infinite Scroll without Column Freeze. Set Height on Table Parent equal to getHeight
  * TODO - Set Margin-top for virtual scroll
+ * TODO - Update rows state when new/updated row data is received
  * TODO - Pagination Component
  * TODO - Drag-Drop of columns
  * TODO - Refactor Code
@@ -220,8 +223,9 @@ class DraggableTable extends Component {
   }
 
   renderTable() {
-    const { columns } = this.props;
-    const { rows } = this.state;
+    const { columns, rows } = this.props;
+    // const { rows } = this.state;
+    // console.log(rows);
     // const cols = columns.map(col => ({
     //   ...col,
     //   Header: <span className="draggable-header">{col.Header}</span>

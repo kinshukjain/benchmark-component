@@ -3,6 +3,7 @@ import './App.css';
 
 // commom imports
 import { /*makeData,*/ columns, agColumns } from "./Utils";
+import {DATA_SIZE} from './performanceMeasureUtils';
 
 // react-table imports
 import DraggableTable from './DraggableTable';
@@ -29,13 +30,14 @@ export class ReactTable extends Component {
     // };
     // const { data } = this.state;
     const { info } = this.props;
+    // console.log(info);
     return (
       <div style={{ height: '100vh' }}>
         <DraggableTable
           rows={info}
           infiniteScroll={false}
           columns={columns}
-          defaultPageSize={1000}
+          defaultPageSize={DATA_SIZE}
           className="-striped -highlight"
         />
       </div>

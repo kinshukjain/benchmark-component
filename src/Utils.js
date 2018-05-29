@@ -105,6 +105,7 @@ export const columns = [
     //   console.log(performance.now());
     //   return a - b;
     // }
+    // Cell: age => (<div>age</div>),
   },
   {
     resizable: true,
