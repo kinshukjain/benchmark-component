@@ -139,11 +139,4 @@ export class MeasurePerformance {
     this.updateTest = true;
     this.rerender(this.cmpSwitcher.next().value, 0, this.getData());
   }
-
-  updateSingleCell(list) {
-    console.log('Measuring time to update single cell ... ');
-    this.init();
-    this.setCmpList(list);
-    this.setMaxReRender(1);
-  }
 }

@@ -7,7 +7,7 @@ import "react-table/react-table.css";
 import "./draggableTable.css";
 
 /** constants for virtual scroll */
-const TABLE_PAGE_SIZE = 100;
+const TABLE_PAGE_SIZE = 1000;
 const DEFAULT_ROW_HEIGHT = 30;
 const MIN_ROWS = 3;
 const DEFAULT_PAGE_SIZE = 10;

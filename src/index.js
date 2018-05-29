@@ -2,7 +2,7 @@ import './index.css';
 import {ReactTable, AgGridTable} from './App';
 import {MeasurePerformance} from './performanceMeasureUtils';
 
-const componentList = [ReactTable, AgGridTable];
+const componentList = [ReactTable];
 const perf = new MeasurePerformance();
 // first-render
 perf.firstRender(componentList);
@@ -12,6 +12,3 @@ perf.firstRender(componentList);
 
 // table update - one table at a time
 // perf.updateCompleteTable(componentList);
-
-// update single cell
-// perf.updateSingleCell(componentList)

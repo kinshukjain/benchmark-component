@@ -37,7 +37,9 @@ export function makeData(len = 5553) {
 export const agColumns = [
   {
     field: "firstName",
-    headerName: "First Name"
+    headerName: "First Name",
+    // editable: true,
+    // sortingOrder: ["asc", "desc"]
   },
   {
     headerName: "Last Name",
@@ -98,7 +100,11 @@ export const columns = [
     Header: "Age",
     field: "age",
     headerName: "Age",
-    accessor: "age"
+    accessor: "age",
+    // sortMethod: (a, b) => {
+    //   console.log(performance.now());
+    //   return a - b;
+    // }
   },
   {
     resizable: true,
@@ -131,7 +137,7 @@ export const columns = [
   {
     resizable: true,
     Header: "Age",
-    accessor: "age",
+    accessor: "visits",
     field: "age",
     headerName: "Age",
   },
